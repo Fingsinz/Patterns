@@ -7,7 +7,7 @@
 
 #include "Product.h"
 
-class ConcreteProductA
+class ConcreteProductA : public Product
 {
 public:
 	ConcreteProductA();
