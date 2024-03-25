@@ -14,6 +14,5 @@ public:
 	Factory() = default;
 	virtual ~Factory();
 
-	virtual Product *createProductA() = 0;
-	virtual Product *createProductB() = 0;
+	virtual Product *createProduct() = 0;
 };

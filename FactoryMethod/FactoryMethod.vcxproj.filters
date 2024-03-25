@@ -21,13 +21,16 @@
     <ClInclude Include="Product.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="ConcreteFactory.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="ConcreteProductA.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="ConcreteProductB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcreteFactoryA.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ConcreteFactoryB.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -38,9 +41,6 @@
     <ClCompile Include="Product.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="ConcreteFactory.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="ConcreteProductA.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
@@ -48,6 +48,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteFactoryA.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ConcreteFactoryB.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

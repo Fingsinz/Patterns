@@ -138,14 +138,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ConcreteFactory.h" />
+    <ClInclude Include="ConcreteFactoryA.h" />
+    <ClInclude Include="ConcreteFactoryB.h" />
     <ClInclude Include="ConcreteProductA.h" />
     <ClInclude Include="ConcreteProductB.h" />
     <ClInclude Include="Factory.h" />
     <ClInclude Include="Product.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConcreteFactory.cpp" />
+    <ClCompile Include="ConcreteFactoryA.cpp" />
+    <ClCompile Include="ConcreteFactoryB.cpp" />
     <ClCompile Include="ConcreteProductA.cpp" />
     <ClCompile Include="ConcreteProductB.cpp" />
     <ClCompile Include="Factory.cpp" />

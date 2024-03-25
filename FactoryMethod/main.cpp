@@ -1,19 +1,22 @@
 #include "Factory.h"
-#include "ConcreteFactory.h"
+#include "ConcreteFactoryA.h"
+#include "ConcreteFactoryB.h"
 #include "Product.h"
 #include <iostream>
 
 int main()
 {
-	Factory *factory = new ConcreteFactory();
+	Factory *factoryA = new ConcreteFactoryA();
+	Factory *factoryB = new ConcreteFactoryB();
 
-	Product *pro1 = factory->createProductA();
-	Product *pro2 = factory->createProductB();
+	Product *pro1 = factoryA->createProduct();
+	Product *pro2 = factoryB->createProduct();
 
 	pro1->use();
 	pro2->use();
 
-	delete factory;
+	delete factoryA;
+	delete factoryB;
 	delete pro1;
 	delete pro2;
 }
