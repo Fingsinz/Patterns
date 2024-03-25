@@ -10,9 +10,9 @@
 
 class Factory
 {
+public:
 	Factory();
 	virtual ~Factory();
 
-public:
 	static Product *createProduct(std::string productName);
 };
