@@ -149,6 +149,7 @@
     <ClCompile Include="AbstractProductB.cpp" />
     <ClCompile Include="ConcreteFactory1.cpp" />
     <ClCompile Include="ConcreteFactory2.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="ProductA1.cpp" />
     <ClCompile Include="ProductA2.cpp" />
     <ClCompile Include="ProductB1.cpp" />

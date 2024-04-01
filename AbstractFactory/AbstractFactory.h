@@ -9,6 +9,6 @@ public:
 	AbstractFactory() = default;
 	virtual ~AbstractFactory() = default;
 
-	virtual AbstractProductA *CreateProductA() = 0;
-	virtual AbstractProductB *CreateProductB() = 0;
+	virtual AbstractProductA *createProductA() = 0;
+	virtual AbstractProductB *createProductB() = 0;
 };
