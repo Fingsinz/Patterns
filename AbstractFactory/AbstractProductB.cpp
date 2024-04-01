@@ -1,0 +1,1 @@
+#include "AbstractProductB.h"

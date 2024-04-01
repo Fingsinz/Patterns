@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AbstractFactory">
+    <Position X="2.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIACAAAAAAAAgAAAAAAAEAAAA=</HashCode>
+      <FileName>AbstractFactory.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractProductA">
+    <Position X="1.25" Y="8" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAQABAAAAAAAAAA=</HashCode>
+      <FileName>AbstractProductA.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AbstractProductB">
+    <Position X="5.25" Y="8" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>AbstractProductB.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteFactory1">
+    <Position X="0.5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAABAAAAAAAAAAIAAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcreteFactory1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteFactory2">
+    <Position X="5" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAABAAAAAAAAAAAAAAAAAIAAAAAAABAAAAA=</HashCode>
+      <FileName>ConcreteFactory2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductA1">
+    <Position X="0.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAgAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>ProductA1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductA2">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>ProductA2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductB1">
+    <Position X="6.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductB1.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProductB2">
+    <Position X="4.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAIAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ProductB2.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
