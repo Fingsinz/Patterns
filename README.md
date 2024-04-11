@@ -14,6 +14,10 @@
 
 ![工厂方法模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_FactoryMethod.png)
 
-- - [抽象工厂模式](AbstractFactory/)
+- [抽象工厂模式](AbstractFactory/)
 
 ![抽象工厂模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_AbstractFactory.png)
+
+- [建造者模式](Builder/)
+
+![建造者模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_Builder.png)
