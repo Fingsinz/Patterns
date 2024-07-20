@@ -1,27 +1,11 @@
-# Patterns
+# 璁捐妯″紡瀛︿範璁板綍
 
-### 目录
+> Reference锛歔鍗＄爜缃慘amaCoder - 璁捐妯″紡绮捐 - https://kamacoder.com/designpattern.php](https://kamacoder.com/designpattern.php)
 
-#### 创建型模式
+瀛︿範璁板綍锛歔https://www.fingsinz.space/2024/cpp-patterns/](https://www.fingsinz.space/2024/cpp-patterns/)
 
-- [简单工厂模式](SimpleFactoy/)
+## 鐩綍
 
-![简单工厂模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_SimpleFactory.png)
-
----
-
-- [工厂方法模式](FactoryMethod/)
-
-![工厂方法模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_FactoryMethod.png)
-
----
-
-- [抽象工厂模式](AbstractFactory/)
-
-![抽象工厂模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_AbstractFactory.png)
-
----
-
-- [建造者模式](Builder/)
-
-![建造者模式](https://fblog-1257020106.cos.ap-shanghai.myqcloud.com/imgs/designpattern_Builder.png)
+1. [鍗曚緥妯″紡](Singleton/Singleton.hpp)
+2. [宸ュ巶鏂规硶妯″紡](FactoryMethod/FactoryMethod.hpp) 
+3. [鎶借薄宸ュ巶妯″紡](AbstractFactory/AbstractFactory.hpp)
