@@ -138,24 +138,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="ConcreteFactoryA.h" />
-    <ClInclude Include="ConcreteFactoryB.h" />
-    <ClInclude Include="ConcreteProductA.h" />
-    <ClInclude Include="ConcreteProductB.h" />
-    <ClInclude Include="Factory.h" />
-    <ClInclude Include="Product.h" />
+    <ClInclude Include="FactoryMethod.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ConcreteFactoryA.cpp" />
-    <ClCompile Include="ConcreteFactoryB.cpp" />
-    <ClCompile Include="ConcreteProductA.cpp" />
-    <ClCompile Include="ConcreteProductB.cpp" />
-    <ClCompile Include="Factory.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Product.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
