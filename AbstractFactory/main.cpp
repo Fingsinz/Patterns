@@ -1,29 +1,104 @@
 #include <iostream>
-#include "AbstractFactory.h"
-#include "AbstractProductA.h"
-#include "AbstractProductB.h"
-#include "ConcreteFactory1.h"
-#include "ConcreteFactory2.h"
+#include <memory>
 
-int main()
-{
-	AbstractFactory *factory1 = new ConcreteFactory1();
-	AbstractProductA *productA1 = factory1->createProductA();
-	AbstractProductB *productB1 = factory1->createProductB();
-	productA1->use();
-	productB1->eat();
+class Sofa {
+public:
+    virtual ~Sofa() = default;
+    virtual void show() = 0;
+};
 
-	AbstractFactory *factory2 = new ConcreteFactory2();
-	AbstractProductA *productA2 = factory2->createProductA();
-	AbstractProductB *productB2 = factory2->createProductB();
-	productA2->use();
-	productB2->eat();
+class ModernSofa : public Sofa {
+public:
+    void show() override {
+        std::cout << "modern sofa\n";
+    }
+};
 
-	delete factory1;
-	delete factory2;
-	delete productA1;
-	delete productB1;
-	delete productA2;
-	delete productB2;
-	return 0;
+class ClassicalSofa : public Sofa {
+public:
+    void show() override {
+        std::cout << "classical sofa\n";
+    }
+};
+
+class Chair {
+public:
+    virtual ~Chair() = default;
+    virtual void show() = 0;
+};
+
+class ModernChair : public Chair {
+public:
+    void show() override {
+        std::cout << "modern chair\n";
+    }
+};
+
+class ClassicalChair : public Chair {
+public:
+    void show() override {
+        std::cout << "classical chair\n";
+    }
+};
+
+class Factory {
+public:
+    virtual ~Factory() = default;
+    virtual Sofa *createSofa() = 0;
+    virtual Chair *createChair() = 0;
+};
+
+class ModernFactory : public Factory {
+public:
+    Sofa *createSofa() override {
+        return new ModernSofa();
+    }
+    Chair *createChair() override {
+        return new ModernChair();
+    }
+};
+
+class ClassicalFactory : public Factory {
+public:
+    Sofa *createSofa() override {
+        return new ClassicalSofa();
+    }
+    Chair *createChair() override {
+        return new ClassicalChair();
+    }
+};
+
+class Orders {
+public:
+    void addOrder(std::string type) {
+        std::unique_ptr<Factory> factory;
+
+        if (type == "modern") {
+            factory = std::make_unique<ModernFactory>();
+        } else if (type == "classical") {
+            factory = std::make_unique<ClassicalFactory>();
+        }
+
+        if (factory) {
+            std::unique_ptr<Chair> chair(std::move(factory->createChair()));
+            std::unique_ptr<Sofa> sofa(std::move(factory->createSofa()));
+            chair->show();
+            sofa->show();
+        }
+    }
+};
+
+int main() {
+    Orders orders;
+
+    int n;
+    std::cin >> n;
+
+    while (n--) {
+        std::string type;
+        std::cin >> type;
+        orders.addOrder(type);
+    }
+
+    return 0;
 }
