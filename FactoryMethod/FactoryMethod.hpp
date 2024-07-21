@@ -1,56 +1,56 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 
 class Product {
 public:
-    Product() = default;
-    virtual ~Product() {};
+	Product() = default;
+	virtual ~Product() {};
 
-    virtual void use() = 0;
+	virtual void use() = 0;
 };
 
 class ConcreteProductA : public Product {
 public:
-    virtual ~ConcreteProductA() {}
+	virtual ~ConcreteProductA() {}
 
-    virtual void use() {
-        std::cout << "use ConcreteProductA\n";
-    }
+	virtual void use() {
+		std::cout << "use ConcreteProductA\n";
+	}
 };
 
 class ConcreteProductB : public Product {
 public:
-    virtual ~ConcreteProductB() {};
+	virtual ~ConcreteProductB() {};
 
-    virtual void use() {
-        std::cout << "use ConcreteProductB\n";
-    }
+	virtual void use() {
+		std::cout << "use ConcreteProductB\n";
+	}
 };
 
 class Factory {
 public:
-    Factory() = default;
-    virtual ~Factory() {};
+	Factory() = default;
+	virtual ~Factory() {};
 
-    virtual Product *createProduct() = 0;
+	virtual Product *createProduct() = 0;
 };
 
 class ConcreteFactoryA : public Factory {
 public:
-    ConcreteFactoryA() = default;
-    virtual ~ConcreteFactoryA() {}
+	ConcreteFactoryA() = default;
+	virtual ~ConcreteFactoryA() {}
 
-    virtual Product *createProduct() {
-        return new ConcreteProductA();
-    }
+	virtual Product *createProduct() {
+		return new ConcreteProductA();
+	}
 };
 
 class ConcreteFactoryB : public Factory {
 public:
-    ConcreteFactoryB() = default;
-    virtual ~ConcreteFactoryB() {};
+	ConcreteFactoryB() = default;
+	virtual ~ConcreteFactoryB() {};
 
-    virtual Product *createProduct() {
-        return new ConcreteProductB();
-    }
+	virtual Product *createProduct() {
+		return new ConcreteProductB();
+	}
 };
