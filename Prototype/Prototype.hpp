@@ -14,7 +14,7 @@ public:
 	ConcretePrototype(std::string const &data) : m_data(data) {}
 	virtual ~ConcretePrototype() = default;
 
-	virtual Prototype *clone() override {
+	Prototype *clone() override {
 		return new ConcretePrototype(this->m_data);
 	}
 
