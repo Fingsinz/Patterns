@@ -15,6 +15,7 @@ public:
 		, m_width(width)
 		, m_height(height) {}
 	virtual ~Rectangle() = default;
+
 	Prototype *clone() override {
 		return new Rectangle(this->m_color, this->m_width, this->m_height);
 	}

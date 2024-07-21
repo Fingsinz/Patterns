@@ -11,25 +11,17 @@ public:
 
 class ConcretePrototype : public Prototype {
 public:
-	ConcretePrototype() = default;
+	ConcretePrototype(std::string const &data) : m_data(data) {}
 	virtual ~ConcretePrototype() = default;
 
-	ConcretePrototype(const ConcretePrototype &prototype) {
-		this->data = prototype.data;
-	}
-
 	virtual Prototype *clone() override {
-		return new ConcretePrototype(*this);
-	}
-
-	void setData(const std::string &data) {
-		this->data = data;
+		return new ConcretePrototype(this->m_data);
 	}
 
 	std::string getData() const {
-		return data;
+		return m_data;
 	}
 
 private:
-	std::string data;
+	std::string m_data;
 };
