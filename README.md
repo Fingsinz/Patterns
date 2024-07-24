@@ -13,3 +13,4 @@
 5. [原型模式](Prototype/Prototype.hpp)
 6. [适配器模式](Adapter/Adapter.hpp)
 7. [代理模式](Proxy/Proxy.hpp)
+8. [装饰模式](Decorator/Decorator.hpp)
