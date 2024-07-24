@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Adaoter.hpp">
+    <ClInclude Include="Adaptor.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
