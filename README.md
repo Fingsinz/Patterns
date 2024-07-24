@@ -9,3 +9,7 @@
 1. [单例模式](Singleton/Singleton.hpp)
 2. [工厂方法模式](FactoryMethod/FactoryMethod.hpp) 
 3. [抽象工厂模式](AbstractFactory/AbstractFactory.hpp)
+4. [建造者模式](Builder/Builder.hpp)
+5. [原型模式](Prototype/Prototype.hpp)
+6. [适配器模式](Adapter/Adapter.hpp)
+7. [代理模式](Proxy/Proxy.hpp)
