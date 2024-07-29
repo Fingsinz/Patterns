@@ -32,6 +32,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Combination", "Combination\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlyWeight", "FlyWeight\FlyWeight.vcxproj", "{65265C54-9566-4276-9A52-CFD26064C551}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Observer", "Observer\Observer.vcxproj", "{DFF93EEE-3B20-4B2F-A760-ADE076E74434}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -136,6 +138,14 @@ Global
 		{65265C54-9566-4276-9A52-CFD26064C551}.Release|x64.Build.0 = Release|x64
 		{65265C54-9566-4276-9A52-CFD26064C551}.Release|x86.ActiveCfg = Release|Win32
 		{65265C54-9566-4276-9A52-CFD26064C551}.Release|x86.Build.0 = Release|Win32
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Debug|x64.ActiveCfg = Debug|x64
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Debug|x64.Build.0 = Debug|x64
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Debug|x86.ActiveCfg = Debug|Win32
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Debug|x86.Build.0 = Debug|Win32
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Release|x64.ActiveCfg = Release|x64
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Release|x64.Build.0 = Release|x64
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Release|x86.ActiveCfg = Release|Win32
+		{DFF93EEE-3B20-4B2F-A760-ADE076E74434}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

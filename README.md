@@ -18,3 +18,4 @@
 10. [桥接模式](Bridge/Bridge.hpp)
 11. [组合模式](Combination/Combination.hpp)
 12. [享元模式](FlyWeight/FlyWeight.hpp)
+13. [观察者模式](Observer/Observer.hpp)
