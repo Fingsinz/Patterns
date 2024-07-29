@@ -19,3 +19,5 @@
 11. [组合模式](Combination/Combination.hpp)
 12. [享元模式](FlyWeight/FlyWeight.hpp)
 13. [观察者模式](Observer/Observer.hpp)
+14. [策略模式](Strategy/Strategy.hpp)
+15. [命令模式](Command/Command.hpp)
