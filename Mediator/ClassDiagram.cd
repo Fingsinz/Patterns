@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Colleague">
+    <Position X="3.25" Y="2.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAEAAAAAAAAQAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Mediator.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteColleagueA">
+    <Position X="0.75" Y="6" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Mediator.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteColleagueB">
+    <Position X="4.75" Y="6" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQIAAAAAAAAAAAAAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Mediator.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcreteMediator">
+    <Position X="9" Y="5.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mediator.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mediator">
+    <Position X="9" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAgABAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mediator.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>

@@ -21,3 +21,4 @@
 13. [观察者模式](Observer/Observer.hpp)
 14. [策略模式](Strategy/Strategy.hpp)
 15. [命令模式](Command/Command.hpp)
+16. [中介者模式](Mediator/Mediator.hpp)
