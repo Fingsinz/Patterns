@@ -23,3 +23,4 @@
 15. [命令模式](Command/Command.hpp)
 16. [中介者模式](Mediator/Mediator.hpp)
 17. [备忘录模式](Memento/Memento.hpp)
+18. [模板方法模式](TemplateMethod/TemplateMethod.hpp)
