@@ -11,6 +11,7 @@
 #include <memory>
 #include <vector>
 
+// 备忘录
 class Memento {
 public:
     Memento(int cnt = 0)
@@ -24,6 +25,7 @@ private:
     int m_cnt = 0;
 };
 
+// 发起者，此处是计数器
 class Counter {
 public:
     void increment() {
@@ -48,9 +50,10 @@ public:
     }
 
 private:
-    int m_cnt = 0;
+    int m_cnt = 0; // 计数器值
 };
 
+// 管理者
 class Caretaker {
 public:
     void addMemento(std::unique_ptr<Memento> memento = nullptr) {
@@ -80,8 +83,8 @@ public:
     }
 
 private:
-    std::vector<std::unique_ptr<Memento>> m_mementos;
-    int curIdx = -1;
+    std::vector<std::unique_ptr<Memento>> m_mementos; // 备忘录组
+    int curIdx = -1;                                  // 当前状态所指备忘录下标
 };
 
 int main() {
