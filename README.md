@@ -24,3 +24,4 @@
 16. [中介者模式](Mediator/Mediator.hpp)
 17. [备忘录模式](Memento/Memento.hpp)
 18. [模板方法模式](TemplateMethod/TemplateMethod.hpp)
+19. [迭代器模式](Iterator/Iterator.hpp)

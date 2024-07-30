@@ -44,6 +44,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Memento", "Memento\Memento.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TemplateMethod", "Template\Template.vcxproj", "{F68E20A6-B1AB-4AD0-8244-A1D1029494EE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Iterator", "Iterator\Iterator.vcxproj", "{05B293D5-257E-47B6-9860-43C4026AA1DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -196,6 +198,14 @@ Global
 		{F68E20A6-B1AB-4AD0-8244-A1D1029494EE}.Release|x64.Build.0 = Release|x64
 		{F68E20A6-B1AB-4AD0-8244-A1D1029494EE}.Release|x86.ActiveCfg = Release|Win32
 		{F68E20A6-B1AB-4AD0-8244-A1D1029494EE}.Release|x86.Build.0 = Release|Win32
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Debug|x64.ActiveCfg = Debug|x64
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Debug|x64.Build.0 = Debug|x64
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Debug|x86.ActiveCfg = Debug|Win32
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Debug|x86.Build.0 = Debug|Win32
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Release|x64.ActiveCfg = Release|x64
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Release|x64.Build.0 = Release|x64
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Release|x86.ActiveCfg = Release|Win32
+		{05B293D5-257E-47B6-9860-43C4026AA1DC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
