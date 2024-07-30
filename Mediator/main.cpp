@@ -1,11 +1,11 @@
 /*
-Author: Fingsinz
-Date: 2024.07.30
-
-中介者模式：行为型设计模式，通过一个中介对象来封装一组对象之间的交互。
-
-题目链接：https://kamacoder.com/problempage.php?pid=1094
-*/
+ * Author: Fingsinz
+ * Date: 2024.07.30
+ *
+ * 中介者模式：行为型设计模式，通过一个中介对象来封装一组对象之间的交互。
+ *
+ * 题目链接：https://kamacoder.com/problempage.php?pid=1094
+ */
 
 #include <algorithm>
 #include <iostream>
@@ -15,6 +15,7 @@ Date: 2024.07.30
 
 class Colleague;
 
+// 抽象中介者
 class Mediator {
 public:
     virtual ~Mediator() = default;
@@ -23,6 +24,7 @@ public:
     virtual void send(std::string const &message, Colleague *colleague) = 0;
 };
 
+// 抽象同事
 class Colleague {
 public:
     Colleague(std::string name = "", Mediator *mediator = nullptr)
@@ -37,6 +39,7 @@ protected:
     std::string m_name;
 };
 
+// 聊天室
 class ChatRoom : public Mediator {
 public:
     void registerColleague(Colleague *colleague) override {
@@ -62,6 +65,7 @@ private:
     std::vector<Colleague *> m_colleagues;
 };
 
+// 用户
 class User : public Colleague {
 public:
     User(std::string name = "", Mediator *mediator = nullptr)
@@ -82,7 +86,9 @@ int main() {
     int n;
     std::cin >> n;
     {
+        // 用户组，在客户端使用智能指针维护用户的生存期
         std::unordered_map<std::string, std::unique_ptr<Colleague>> colleagues;
+        // 聊天室，中介者
         std::unique_ptr<Mediator> mediator(new ChatRoom());
 
         while (n--) {
@@ -101,6 +107,7 @@ int main() {
             mediator->send(msg, colleagues[user].get());
         }
 
+        // 当用户组colleagues析构时，释放内存，聊天室里面维护的同事指针也需要remove
         for (auto const &c : colleagues) {
             mediator->removeColleague(c.second.get());
         }

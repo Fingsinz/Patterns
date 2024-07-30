@@ -1,11 +1,11 @@
 #pragma once
 
 /*
-Author: Fingsinz
-Date: 2024.07.30
-
-中介者模式：行为型设计模式，通过一个中介对象来封装一组对象之间的交互。
-*/
+ * Author: Fingsinz
+ * Date: 2024.07.30
+ *
+ * 中介者模式：行为型设计模式，通过一个中介对象来封装一组对象之间的交互。
+ */
 
 #include <iostream>
 #include <vector>
