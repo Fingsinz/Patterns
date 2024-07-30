@@ -17,14 +17,14 @@ class Iterator {
 public:
     virtual ~Iterator() = default;
     virtual bool hasNext() = 0;
-    virtual T next() = 0;
+    virtual T *next() = 0;
 };
 
 // 具体迭代器
 template <typename T>
 class ConcreteIterator : public Iterator<T> {
 public:
-    ConcreteIterator(std::vector<T> elements)
+    ConcreteIterator(std::vector<T *> elements)
             : m_elements(elements)
             , m_idx(0) {}
 
@@ -32,16 +32,17 @@ public:
         return m_idx < m_elements.size();
     }
 
-    T next() override {
+    T *next() override {
         if (hasNext()) {
             return m_elements[m_idx++];
         }
-        return T();
+        return nullptr;
     }
 
 private:
     int m_idx;
-    std::vector<T> m_elements;
+    // 使用裸指针，仅访问数据，不管理内存
+    std::vector<T *> m_elements;
 };
 
 // 抽象聚合
@@ -56,22 +57,37 @@ public:
 template <typename T>
 class StudentList : public Iterable<T> {
 public:
-    void addElement(T data) {
-        m_elements.push_back(data);
+    void addElement(T *data) {
+        std::unique_ptr<T> ptr(data);
+        m_elements.emplace_back(std::move(ptr));
     }
 
     Iterator<T> *createIterator() override {
-        return new ConcreteIterator<T>(m_elements);
+        // 将智能指针转为裸指针，提供给迭代器
+        std::vector<T *> elements;
+        for (std::unique_ptr<T> &ptr : m_elements) {
+            elements.emplace_back(ptr.get());
+        }
+        return new ConcreteIterator<T>(elements);
     }
 
 private:
-    std::vector<T> m_elements;
+    // 智能指针管理数据内存，实际数据内存应在聚合中管理。
+    std::vector<std::unique_ptr<T>> m_elements;
 };
 
 // 本题中的特殊数据结构
 struct Student {
     std::string name;
     std::string no;
+
+    Student(std::string _name, std::string _no)
+            : name(_name)
+            , no(_no) {}
+
+    void print() const {
+        std::cout << name << " " << no << std::endl;
+    }
 };
 
 int main() {
@@ -84,14 +100,15 @@ int main() {
         std::string name, no;
         std::cin >> name >> no;
 
-        list.addElement({name, no});
+        Student *stu = new Student(name, no);
+        list.addElement(stu);
     }
 
     {
         std::unique_ptr<Iterator<Student>> iter(list.createIterator());
         while (iter->hasNext()) {
             auto s = iter->next();
-            std::cout << s.name << " " << s.no << std::endl;
+            s->print();
         }
     }
 
