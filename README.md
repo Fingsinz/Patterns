@@ -22,3 +22,4 @@
 14. [策略模式](Strategy/Strategy.hpp)
 15. [命令模式](Command/Command.hpp)
 16. [中介者模式](Mediator/Mediator.hpp)
+17. [备忘录模式](Memento/Memento.hpp)
