@@ -12,6 +12,7 @@
 // 处理者
 class Handler {
 public:
+    virtual ~Handler() = default;
     virtual void handleRequest(int requestId) = 0;
     virtual void setNextHandler(Handler *next) = 0;
 
