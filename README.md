@@ -28,3 +28,4 @@
 20. [状态模式](State/State.hpp)
 21. [责任链模式](ResponsibilityChain/ResponsibilityChain.hpp)
 22. [解释器模式](Interpreter/Interpreter.hpp)
+23. [访问者模式](Visitor/Visitor.hpp)
