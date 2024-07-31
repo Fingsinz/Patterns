@@ -26,3 +26,4 @@
 18. [模板方法模式](TemplateMethod/TemplateMethod.hpp)
 19. [迭代器模式](Iterator/Iterator.hpp)
 20. [状态模式](State/State.hpp)
+21. [责任链模式](ResponsibilityChain/ResponsibilityChain.hpp)
