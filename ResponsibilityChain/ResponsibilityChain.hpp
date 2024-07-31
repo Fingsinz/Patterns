@@ -14,7 +14,9 @@ class Handler {
 public:
     virtual ~Handler() = default;
     virtual void handleRequest(int requestId) = 0;
-    virtual void setNextHandler(Handler *next) = 0;
+    virtual void setNextHandler(Handler *next) {
+        m_nextHandler = next;
+    }
 
 protected:
     Handler *m_nextHandler;
@@ -23,7 +25,7 @@ protected:
 // 具体处理者
 class ConcreteHandler : public Handler {
 public:
-    void handleRequest(int requestId) {
+    void handleRequest(int requestId) override {
         if (canHandle(requestId)) {
             std::cout << "ConcreteHandler::handleRequest() " << requestId << std::endl;
             return;
@@ -32,10 +34,6 @@ public:
         } else {
             // 无法处理请求
         }
-    }
-
-    void setNextHandler(Handler *next) {
-        m_nextHandler = next;
     }
 
 private:
