@@ -39,6 +39,9 @@ public:
 
 class Light {
 public:
+    Light()
+            : m_state(new LightOff()) {}
+
     void setState(State *state) {
         m_state.reset(state);
     }
