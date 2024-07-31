@@ -10,11 +10,32 @@
 #include <iostream>
 #include <memory>
 
+class LeaveRequest {
+public:
+    LeaveRequest(std::string name = "", int days = 0)
+            : m_name(name)
+            , m_days(days) {}
+
+    std::string getName() const {
+        return m_name;
+    }
+
+    int getDays() const {
+        return m_days;
+    }
+
+private:
+    std::string m_name;
+    int m_days;
+};
+
 // 抽象处理者
 class Handler {
 public:
-    virtual void handleRequest(std::string name, int days) = 0;
-    virtual void setNextHandler(Handler *next) = 0;
+    virtual void handleRequest(LeaveRequest &req) = 0;
+    virtual void setNextHandler(Handler *next) {
+        m_nextHandler = next;
+    }
 
 protected:
     Handler *m_nextHandler = nullptr;
@@ -23,18 +44,14 @@ protected:
 // 具体处理者：主管
 class Supervisor : public Handler {
 public:
-    void handleRequest(std::string name, int days) override {
-        if (canHandle(days)) {
-            std::cout << name << " Approved by Supervisor.\n";
+    void handleRequest(LeaveRequest &req) override {
+        if (canHandle(req.getDays())) {
+            std::cout << req.getName() << " Approved by Supervisor.\n";
         } else if (m_nextHandler != nullptr) {
-            m_nextHandler->handleRequest(name, days);
+            m_nextHandler->handleRequest(req);
         } else {
-            std::cout << name << " Denied by Supervisor.\n";
+            std::cout << req.getName() << " Denied by Supervisor.\n";
         }
-    }
-
-    void setNextHandler(Handler *next) override {
-        m_nextHandler = next;
     }
 
 private:
@@ -46,18 +63,14 @@ private:
 // 具体处理者：经理
 class Manager : public Handler {
 public:
-    void handleRequest(std::string name, int days) override {
-        if (canHandle(days)) {
-            std::cout << name << " Approved by Manager.\n";
+    void handleRequest(LeaveRequest &req) override {
+        if (canHandle(req.getDays())) {
+            std::cout << req.getName() << " Approved by Manager.\n";
         } else if (m_nextHandler != nullptr) {
-            m_nextHandler->handleRequest(name, days);
+            m_nextHandler->handleRequest(req);
         } else {
-            std::cout << name << " Denied by Manager.\n";
+            std::cout << req.getName() << " Denied by Manager.\n";
         }
-    }
-
-    void setNextHandler(Handler *next) override {
-        m_nextHandler = next;
     }
 
 private:
@@ -69,18 +82,14 @@ private:
 // 具体处理者：董事
 class Director : public Handler {
 public:
-    void handleRequest(std::string name, int days) override {
-        if (canHandle(days)) {
-            std::cout << name << " Approved by Director.\n";
+    void handleRequest(LeaveRequest &req) override {
+        if (canHandle(req.getDays())) {
+            std::cout << req.getName() << " Approved by Director.\n";
         } else if (m_nextHandler != nullptr) {
-            m_nextHandler->handleRequest(name, days);
+            m_nextHandler->handleRequest(req);
         } else {
-            std::cout << name << " Denied by Director.\n";
+            std::cout << req.getName() << " Denied by Director.\n";
         }
-    }
-
-    void setNextHandler(Handler *next) override {
-        m_nextHandler = next;
     }
 
 private:
@@ -102,8 +111,9 @@ int main() {
         std::string name;
         int days;
         std::cin >> name >> days;
+        LeaveRequest req(name, days);
 
-        supervisor->handleRequest(name, days);
+        supervisor->handleRequest(req);
     }
 
     return 0;
